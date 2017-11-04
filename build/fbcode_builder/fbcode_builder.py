@@ -7,18 +7,18 @@ from __future__ import unicode_literals
 
 This is a small DSL to describe builds of Facebook's open-source projects
 that are published to Github from a single internal repo, including projects
-that depend on folly, wangle, proxygen, fbthrift, etc.
+that depend on folly, wangle, proxygen, fbthrift, etc..
 
-This file defines the interface of the DSL, and common utilieis, but you
-will have to instantiate a specific builder, with specific options, in
+This file defines the interface of the DSL and common utilities, but you
+will have to instantiate a specific builder with specific options in
 order to get work done -- see e.g. make_docker_context.py.
 
 == Design notes ==
 
 Goals:
 
- - A simple declarative language for what needs to be checked out & built,
-   how, in what order.
+ - A simple declarative language for what needs to be checked out and built,
+   how to build it, and in what order.
 
  - The same specification should work for external continuous integration
    builds (e.g. Travis + Docker) and for internal VM-based continuous
